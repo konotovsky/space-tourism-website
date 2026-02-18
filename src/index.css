@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-outfit: "Outfit", sans-serif;
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
 
   --color-*: initial;
   --color-white: #ffffff;
@@ -10,5 +13,5 @@
 }
 
 body {
-  @apply bg-blue-900;
+  @apply font-barlow bg-blue-900 text-blue-300;
 }
