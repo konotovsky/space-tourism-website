@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import RootLayout from "./components/layouts/RootLayout";
-import Home from "./components/pages/Home";
-import Destination from "./components/pages/Destination";
-import Crew from "./components/pages/Crew";
-import Technology from "./components/pages/Technology";
+import RootLayout from "@/components/layouts/RootLayout";
+import Home from "@/components/pages/Home";
+import Destination from "@/components/pages/Destination";
+import Crew from "@/components/pages/Crew";
+import Technology from "@/components/pages/Technology";
 
 export default function App() {
   return (
@@ -11,9 +11,9 @@ export default function App() {
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<Home />} />
-          <Route path="destination" element={<Destination />} />
-          <Route path="crew" element={<Crew />} />
-          <Route path="technology" element={<Technology />} />
+          <Route path="/destinations" element={<Destination />} />
+          <Route path="/crew" element={<Crew />} />
+          <Route path="/technology" element={<Technology />} />
         </Route>
       </Routes>
     </BrowserRouter>
