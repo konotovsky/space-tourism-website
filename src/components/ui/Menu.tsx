@@ -38,35 +38,35 @@ export default function Menu({ items }: MenuProps) {
       <button className="z-1000 sm:hidden" onClick={toggleMenu}>
         <img src={isOpen ? menuClose : menuOpen} alt="Menu toggle" />
       </button>
-      {isOpen && (
-        <div className="absolute inset-0 ml-auto max-w-2/3 bg-white/5 backdrop-blur-[20px]">
-          <nav className="mt-33.25 text-white uppercase">
-            <ul className="flex flex-col gap-8">
-              {items.map((item, index) => {
-                const number = index.toString().padStart(2, "0");
+      <div
+        className={`fixed inset-y-0 right-0 z-100 w-2/3 max-w-sm transform bg-white/5 backdrop-blur-[20px] transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"} `}
+      >
+        <nav className="mt-33.25 text-white uppercase">
+          <ul className="flex flex-col gap-8">
+            {items.map((item, index) => {
+              const number = index.toString().padStart(2, "0");
 
-                return (
-                  <li key={item.path}>
-                    <NavLink
-                      to={item.path}
-                      end={item.path === "/"}
-                      onClick={() => setIsOpen(false)}
-                      className={({ isActive }) =>
-                        `font-barlow-condensed border-l-[3px] pl-8 text-base tracking-[2px] ${isActive ? "border-white" : "border-transparent"}`
-                      }
-                    >
-                      <span className="mr-3 font-bold tracking-[2.7px]">
-                        {number}
-                      </span>
-                      {item.name}
-                    </NavLink>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </div>
-      )}
+              return (
+                <li key={item.path}>
+                  <NavLink
+                    to={item.path}
+                    end={item.path === "/"}
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      `font-barlow-condensed border-l-[3px] pl-8 text-base tracking-[2px] ${isActive ? "border-white" : "border-transparent"}`
+                    }
+                  >
+                    <span className="mr-3 font-bold tracking-[2.7px]">
+                      {number}
+                    </span>
+                    {item.name}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
     </>
   );
 }
