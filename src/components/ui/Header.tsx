@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="absolute top-0 left-0 z-10 w-full">
       <Container>
-        <div className="flex items-center justify-between pt-6 xl:pt-10">
+        <div className="flex items-center justify-between pt-6 sm:pt-0 xl:pt-10">
           <Logo src={logoImage} alt="Star logo" />
           <Menu items={menuItems} />
         </div>

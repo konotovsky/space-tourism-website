@@ -13,7 +13,7 @@ export default function RootLayout() {
       <Header />
       <main>
         <div className={`min-h-screen bg-cover bg-bottom ${bgClass}`}>
-          <div className="pt-22">
+          <div className="pt-22.75 sm:pt-25.25 lg:pt-35.25">
             <Outlet />
           </div>
         </div>
