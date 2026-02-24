@@ -1,3 +1,5 @@
+import Container from "@/components/ui/Container";
+
 export default function Destination() {
-  return <div>Destination</div>;
+  return <Container>Destination</Container>;
 }

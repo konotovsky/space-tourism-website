@@ -1,3 +1,5 @@
+import Container from "@/components/ui/Container";
+
 export default function Crew() {
-  return <div>Crew</div>;
+  return <Container>Crew</Container>;
 }

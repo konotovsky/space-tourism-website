@@ -1,3 +1,5 @@
+import Container from "@/components/ui/Container";
+
 export default function Technology() {
-  return <div>Technology</div>;
+  return <Container>Technology</Container>;
 }

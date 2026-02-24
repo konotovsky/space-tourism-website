@@ -1,15 +1,22 @@
-import { Outlet } from "react-router";
+import { Outlet, useMatches } from "react-router";
 import Header from "@/components/ui/Header";
-import Container from "@/components/ui/Container";
+import type { AppRouteObject } from "@/types/ui.types";
 
 export default function RootLayout() {
+  const matches = useMatches() as Array<AppRouteObject>;
+
+  const currentMatch = matches[matches.length - 1];
+  const bgClass = currentMatch?.handle?.bg || "bg-blue-900";
+
   return (
     <>
       <Header />
       <main>
-        <Container>
-          <Outlet />
-        </Container>
+        <div className={`min-h-screen bg-cover bg-bottom ${bgClass}`}>
+          <div className="pt-22">
+            <Outlet />
+          </div>
+        </div>
       </main>
     </>
   );
