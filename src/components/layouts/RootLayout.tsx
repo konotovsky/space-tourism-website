@@ -9,7 +9,7 @@ export default function RootLayout() {
   const bgClass = currentMatch?.handle?.bg || "bg-blue-900";
 
   return (
-    <div className={`flex min-h-screen flex-col bg-cover bg-bottom ${bgClass}`}>
+    <div className={`flex min-h-screen flex-col bg-cover bg-center ${bgClass}`}>
       <Header />
       <main className="flex flex-1">
         <Outlet />
