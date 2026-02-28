@@ -17,12 +17,12 @@ export default function Menu({ items }: MenuProps) {
             const number = index.toString().padStart(2, "0");
 
             return (
-              <li className="sm:py-[38.5px]" key={item.path}>
+              <li className="md:py-[38.5px]" key={item.path}>
                 <NavLink
                   to={item.path}
                   end={item.path === "/"}
                   className={({ isActive }) =>
-                    `font-barlow-condensed text-base tracking-[2px] hover:border-white/50 sm:border-b-[3px] sm:py-[38.5px] ${isActive ? "sm:border-white hover:sm:border-white" : "sm:border-transparent"}`
+                    `font-barlow-condensed text-base tracking-[2px] hover:border-white/50 md:border-b-[3px] md:py-[38.5px] ${isActive ? "md:border-white hover:md:border-white" : "md:border-transparent"}`
                   }
                 >
                   <span className="mr-3 font-bold tracking-[2.7px]">
@@ -39,7 +39,7 @@ export default function Menu({ items }: MenuProps) {
         <img src={isOpen ? menuClose : menuOpen} alt="Menu toggle" />
       </button>
       <div
-        className={`fixed inset-y-0 right-0 z-100 w-2/3 max-w-sm transform bg-white/5 backdrop-blur-[20px] transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"} `}
+        className={`fixed inset-y-0 right-0 z-100 w-2/3 max-w-63.5 transform bg-white/5 backdrop-blur-[20px] transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"} `}
       >
         <nav className="mt-33.25 text-white uppercase">
           <ul className="flex flex-col gap-8">
